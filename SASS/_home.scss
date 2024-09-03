@@ -1,0 +1,52 @@
+
+.home{
+    font-size: 1.5rem;
+    padding:2rem;
+    background-color: $color-black-dark;
+    border-radius: 1rem;
+
+    &__item{
+        list-style: none;
+        display: flex;
+        gap:1.4rem;
+        justify-content: start;
+        align-items: center;
+        margin:2rem 1rem;
+        transition: all 0.3s;
+
+        button{
+            background-color: transparent;
+            text-decoration:none ;
+            color: inherit;
+            border:none;
+            outline:none;
+            font-weight: 600;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        i{
+            &:hover{
+                fill: currentColor;
+            }
+        }
+
+        &:hover,
+        &:active,
+        &:focus{
+            cursor: pointer;
+            color: $color-white;
+            text-shadow: 0 0 2px $color-white;
+        }
+    }
+}
+
+.logo{
+    margin:0rem 1rem;
+
+    &__img{
+        filter: invert(1);
+    }
+}

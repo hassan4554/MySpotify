@@ -1,0 +1,141 @@
+.login-container {
+    background: linear-gradient(to bottom, #292929, #181818, #010101);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 0;
+
+    &__div {
+        width: 60%;
+        padding:6rem 8rem;
+        background-color: #121212;
+        border-radius: 6px;
+
+        &--icon {
+            color: $color-white;
+            font-size: 6rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__form {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        label {
+            display: block;
+            color: $color-white;
+            text-align: start;
+            margin-bottom: 0.7rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        input {
+            border: 1px solid rgba($color-white, 0.4);
+            color: $font-color;
+            font-size: 1.6rem;
+            border-radius: 5px;
+            padding: 1.3rem;
+            width: 100%;
+            outline: none;
+            background-color: transparent;
+
+            &::placeholder {
+                font-size: 1.4rem;
+                font-weight: 700;
+                font-family: inherit;
+                border-left: $font-color;
+            }
+
+            &:hover {
+                border: 1px solid $color-white;
+                outline: none;
+            }
+        }
+    }
+
+    &__warning {
+        margin: 1rem 0;
+        color: $color-white;
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-align: left;
+        display: flex;
+        gap: 0.5rem;
+
+        i {
+            font-size: 1.5rem;
+            color: red;
+        }
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+
+        a {
+            color: $color-white;
+
+            &:hover {
+                color: $color-green;
+            }
+        }
+    }
+
+    &__footer {
+        color: $font-color;
+        font-size: 1.6rem;
+        margin-top: 2rem;
+
+        a {
+            color: $color-white;
+            text-shadow: 0 0 1px $color-white;
+
+            &:hover {
+                color: $color-green;
+            }
+        }
+    }
+}
+
+.login-footer {
+    background-color: $color-black-dark;
+    color: $font-color;
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 1.3rem;
+
+    a {
+        color: inherit;
+    }
+}
+
+.show-btn {
+    background-color: transparent;
+    color: $font-color;
+    outline: none;
+    border: none;
+    transition: none;
+    font-size: 2.3rem;
+    position: absolute;
+    transform: translateX(-150%) translateY(45%);
+
+    &:hover {
+        color: $color-white;
+        cursor: pointer;
+    }
+
+    &:active {
+        color: inherit;
+    }
+}

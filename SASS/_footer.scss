@@ -1,0 +1,23 @@
+.footer{
+    box-sizing: inherit;
+    position: sticky;
+    bottom:0;
+    left:0;
+    z-index: 10000;
+    padding:2rem 1.5rem;
+    height: 10vh;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right bottom,#ae2a98, #a238a3, #8c53b9, #7b67ca, #667fde, #5b8eeb);
+
+    &__text{
+        color:$color-white;
+        font-size: 1.5rem;
+    }
+}
+
+#logout-Btn{
+    display: none;
+}

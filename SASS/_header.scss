@@ -1,0 +1,116 @@
+.right {
+    &__header {
+        position: sticky;
+        background-color: rgba($color-black-dark, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+
+        @media only screen and (max-width:$bp-medium) {
+            justify-content: center;
+        }
+
+        &--icons {
+
+            button {
+                color: white;
+                background-color: rgba($color-black-medium, 0.7);
+                border: none;
+                outline: none;
+                border-radius: 50%;
+                width: 4rem;
+                height: 4rem;
+                font-size: 1.4rem;
+                margin-right: 0.7rem;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &--btn{
+            display: flex;
+        }
+
+        &--userIcon{
+            background-color: $color-green;
+            color:#ddd;
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin:0 1.5rem;
+            width:6rem;
+            height: 6rem;
+            border-radius: 50%;
+            text-align: center;
+            display: none;
+
+            p{
+                margin-top: 0.8rem;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.searchbar-box{
+    margin: 0 auto 0 6rem;
+    opacity: 0;
+
+    @media only screen and (max-width:$bp-medium){
+        margin: 0 auto 0 3rem;   
+    }
+}
+
+.searchbar{
+    padding:1.5rem 4rem;
+    padding-left: 1rem;
+    border:3px solid $color-white;
+    border-left: none;
+    border-top-right-radius: 100000px;
+    border-bottom-right-radius: 100000px;
+    outline: none;
+    color:$font-color;
+    background-color: transparent;
+
+    @media only screen and (max-width:$bp-medium){
+        padding:1rem 1rem;
+        padding-left: 0;
+    }
+}
+
+.searchbar-btn{
+    padding:1.5rem;
+    margin-right: -1rem;
+    color:$font-color;
+    background-color: transparent;
+    border:3px solid $color-white;
+    border-right: none;
+    border-top-left-radius: 100000px;
+    border-bottom-left-radius: 100000px;
+    outline: none;
+
+    @media only screen and (max-width:$bp-medium){
+        padding:1rem;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:hover i{
+        text-shadow: 0 0 1px $color-white;
+    }
+
+    i{
+        &:active{
+            transform: translateY(1px);
+        }
+    }
+}

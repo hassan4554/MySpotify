@@ -1,0 +1,28 @@
+{
+  "name": "myspotify",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "watch:sass": "node-sass sass/main.scss CSS/style.css -w",
+    "start": "npm-run-all --parallel watch:sass dev",
+    "compile:sass": "node-sass sass/main.scss CSS/style_comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style_comp.css -o css/style_prefixer.css ",
+    "compress:css": "node-sass css/style_prefixer.css css/style.css --output-style compressed ",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^11.0.0",
+    "vite": "^5.4.1",
+    "vite-plugin-commonjs": "^0.10.1"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

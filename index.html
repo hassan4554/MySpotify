@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySpotify</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="home">
+                <div class="logo">
+                    <img src="./images/logo.svg" alt="Logo" class="logo__img">
+                </div>
+                <ul class="home__list">
+                    <li class="home__item">
+                        <i class="fa-solid fa-house"></i>
+                        <button id="home-btn">Home</button>
+                    </li>
+                    <li class="home__item" id="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <button>Search</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="library" id="library">
+                <div class="library__start">
+                    <div class="library__img">
+                        <img src="./images/playlist.svg" alt="Playlist">
+                        <a href="#">Your Library</a>
+                    </div>
+                    <button class="library__add-btn">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="library__scrollable">
+                    <div class="library__scrollable--section u-mb-small">
+                        <h3 class="heading-3 u-mb-small">Create your first playlist</h3>
+                        <p class="paragraph u-mb-small">It's easier we will help you</p>
+                        <Button class="btn-white u-mb-small">Create Playlist</Button>
+                    </div>
+                    <div class="library__scrollable--section">
+                        <h3 class="heading-3 u-mb-small">Let's find some podcasts to follow</h3>
+                        <p class="paragraph u-mb-small">We will keep you updated on new episodes</p>
+                        <Button class="btn-white u-mb-small">Browse Podcasts</Button>
+                    </div>
+                </div>
+
+                <div class="library__footer">
+                    <ul class="library__footer--list">
+                        <li class="library__footer--item">
+                            <a href="https://www.spotify.com/pk-en/legal/">Legal</a>
+                        </li>
+                        <li class="library__footer--item">
+                            <a href="https://www.spotify.com/pk-en/safetyandprivacy/"> Safety & Privacy Center</a>
+                        </li>
+                        <li class="library__footer--item">
+                            <a href="https://www.spotify.com/pk-en/legal/privacy-policy/"> Privacy Policy</a>
+                        </li>
+                        <li class="library__footer--item">
+                            <a href="https://www.spotify.com/pk-en/legal/cookies-policy/"> Cookies</a>
+                        </li>
+                        <li class="library__footer--item">
+                            <a href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3">About Ads</a>
+                        </li>
+                        <li class="library__footer--item">
+                            <a href="https://www.spotify.com/pk-en/accessibility/"> Accessibility</a>
+                        </li>
+                    </ul>
+                    <div class="library__footer--item">
+                        <a href="https://www.spotify.com/legal/cookies-policy/">Cookies</a>
+                    </div>
+                    <button class="library__language-btn" id="language-btn">
+                        <i class="fa-solid fa-globe"></i>
+                        Select Language
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <header class="right__header">
+                <div class="right__header--icons">
+                    <button><i class="fa-solid fa-chevron-left" title="Go back"></i></button>
+                    <button><i class="fa-solid fa-chevron-right" title="Go forward"></i></button>
+                </div>
+                <div class="searchbar-box" id="searchbar-box">
+                    <button class="searchbar-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" class="searchbar" id="search-bar" placeholder="What do you want to play?">
+                </div>
+                <div class="right__header--btn">
+                    <button class="btn u-mr-small signup-Btn" onclick="NavigateToSignup()">Sign up</button>
+                    <button class="btn-white btn-white--lg" id="login-Btn">Log in</button>
+                </div>
+                <div class="right__header--userIcon" id="userIcon">
+                    <p id="userIconName"></p>
+                </div>
+            </header>
+            <div class="playlist">
+                <div class="playlist__popular">
+                    <div class="playlist__popular--start">
+                        <h2 class="heading-2">Popular Albums</h2>
+                        <button>Show All</button>
+                    </div>
+
+                    <div class="card-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <h5 class="heading-5">Preview of Spotify</h5>
+            <p class="footer__text">Sign up to get unlimited songs and podcasts with occasional ads. No credit cards
+                needed.</p>
+        </div>
+        <button class="btn-white btn-white--lg signup-Btn" onclick="NavigateToSignup()">Sign up for free</button>
+        <button class="btn-white btn-white--lg" id="logout-Btn" onclick="logout()"> Logout</button>
+    </footer>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2d137cabd3.js" crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script type="module" src="./Scripts/script.js"></script>
+</body>
+
+</html>

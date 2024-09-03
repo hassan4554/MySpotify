@@ -1,0 +1,46 @@
+.playlist{
+    padding:2rem;
+    max-height: 70vh;
+    overflow-y: scroll;
+
+    //////////////////////////////////////////////////////////////////////////////
+        
+    &::-webkit-scrollbar {
+        width:1.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: rgba($color-black-medium,0.5);
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    //////////////////////////////////////////////////////////////////////////////
+
+    &__popular{
+
+        &--start{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:1.5rem 0;
+
+            button{
+                color:$font-color;
+                background-color: transparent;
+                border: none;
+                outline:none;
+                font-size: 1.4rem;
+                font-weight: 700;
+                transition: all 0.3s;
+
+                &:hover{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

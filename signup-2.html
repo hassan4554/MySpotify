@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up - MySpotify</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- StyleSheet -->
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="signup-container">
+        <div class="signup-container__div">
+            <i class="fa-brands fa-spotify u-mb-small"></i>
+            <div class="u-mb-small"></div>
+            <form action="#" class="signup-container__form" id="signup-container__form-2">
+                <label for="name">Username</label>
+                <input type="text" name="username" id="username" class="container__form--input" placeholder="Username">
+                <div class="signup-container__form--warning" id="username-warning"></div>
+
+                <div class="u-mb-small"></div>
+
+                <label for="name">Password</label>
+                <input type="password" name="password" id="password" class="container__form--input" placeholder="password">
+                <button class="showBtn" id="show-btn" onclick="showPassword(event)"> <i class="fa-regular fa-eye-slash"></i></button>
+                <div class="signup-container__form--warning" id="password-warning"></div>
+
+                <div class="u-mb-small"></div>
+
+                <button type="submit" class="btn-green">Next</button>
+            </form>
+            <div class="seperator">
+                <div class="seperator-1"></div>
+                <div class="seperator-2">or</div>
+                <div class="seperator-1"></div>
+            </div>
+            <button class="app-btn">
+                <i class="fa-brands fa-google clr-google"></i>
+                <p>Sign up with Google</p>
+            </button>
+            <button class="app-btn">
+                <i class="fa-brands fa-facebook u-clr-blue"></i>
+                <p>Sign up with Facebook</p>
+            </button>
+            <button class="app-btn">
+                <i class="fa-brands fa-apple"></i>
+                <p>Sign up with Apple</p>
+            </button>
+            <div class="ruler"></div>
+            <p class="signup-container__text u-mb-small">Already have an account?<a href="./login.html">log in here</a>
+            </p>
+            <footer class="signup-container__footer">
+                This site is protected by reCAPTCHA and the Google
+                <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.
+            </footer>
+        </div>
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2d137cabd3.js" crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script src="./Scripts/signup-2.js"></script>
+</body>
+
+</html>

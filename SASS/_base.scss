@@ -1,0 +1,52 @@
+//COLORS
+$color-black: #000;
+$color-black-dark: #1f1f1f;
+$color-black-medium: #2f2f2f;
+$color-white: #fff;
+$font-color: #b1b1b1;
+$color-green:#3be276;
+
+
+//  BREAK-POINTS
+$bp-largest: 54em;
+$bp-large: 45.75em;
+$bp-medium: 39.7em;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    transition: all 0.1s;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', 'Roboto';
+    
+    @media only screen and (max-width:$bp-largest) {
+        font-size: 50%;
+    }
+    
+    @media only screen and (max-width:$bp-large) {
+        font-size: 40%;
+    }
+
+
+
+}
+
+.container {
+    background-color: $color-black;
+    color: $font-color;
+    display: grid;
+    grid-template-columns: 25vw 72.5vw;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+}
