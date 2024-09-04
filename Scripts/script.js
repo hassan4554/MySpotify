@@ -84,9 +84,7 @@ async function dataChecker() {
     let logoutBtn = document.getElementById("logout-Btn");
     let userIcon = document.getElementById("userIcon");
     let userIconName = document.getElementById("userIconName");
-    // if (userData[0]) {
-    if (DataKeeper._Data) {
-        let userData = DataKeeper._Data
+    if (userData[0]) {
         console.log("Data found");
         userIconName.innerHTML = `${userData[0].username.charAt(0).toUpperCase()}`;
         for (let i = 0; i < signupBtn.length; i++) {
@@ -277,12 +275,13 @@ document.getElementById("login-Btn").addEventListener('click', NavigateToLogin);
 ///////////////////////////     GetAlbums       ///////////////////////////
 
 async function getAlbums() {
-    let songs = await fetch('http://127.0.0.1:3000/songs/');
+    let songs = await fetch('/songs/');
     let response = await songs.text();
+    console.log(response);
 
     let div = document.createElement('div');
     div.innerHTML = response;
-
+    
     let as = div.getElementsByTagName('a');
     let folder = [];
 
@@ -299,7 +298,7 @@ async function getAlbums() {
 
 async function createFolders(folders) {
     for (let i = 0; i < folders.length; i++) {
-        let a = await fetch(`http://127.0.0.1:3000/songs/${folders[i]}`);
+        let a = await fetch(`/songs/${folders[i]}`);
         let response = await a.text();
 
         let div = document.createElement('div');

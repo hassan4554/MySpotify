@@ -72,7 +72,7 @@ function getAllParameter() {
 
 
 async function getSongsFolder(song_folder) {
-    let songs = await fetch(`http://127.0.0.1:3000/songs/${song_folder}/ganna`);
+    let songs = await fetch(`/songs/${song_folder}/ganna`);
     let response = await songs.text();
 
     let div = document.createElement('div');
@@ -91,7 +91,7 @@ async function getSongsFolder(song_folder) {
 }
 
 async function getSongs(song_folder, song) {
-    let songs = await fetch(`http://127.0.0.1:3000/songs/${song_folder}/ganna/${song}/`);
+    let songs = await fetch(`/songs/${song_folder}/ganna/${song}/`);
     let response = await songs.text();
 
     let div = document.createElement('div');
