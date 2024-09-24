@@ -21,7 +21,6 @@ request.onerror = (event) => {
 /////////////////////////////////////   AddData    ///////////////////////////////
 
 async function addData(userData) {
-    console.log(userData);
     return new Promise((resolve, reject) => {
         if (!db.objectStoreNames.contains("userDataStore")) {
             reject("Object store 'userDataStore' does not exist.")
@@ -74,18 +73,9 @@ form.addEventListener('submit', async (event) => {
                 "createdAt": response.data.createdAt,
                 "updatedAt": response.data.updatedAt
             }
-
-            const instance = DataKeeper.getInstance();
-            // console.log(instance);
-            console.log(`Static data: ${DataKeeper._Data}`);
-            DataKeeper._Data = userData;
-            console.log(`Static data: ${DataKeeper._Data}`);
-            // instance.Data = userData;
-            // console.log(instance);
-            // let dataResponse = await addData(userData);
-            // console.log(dataResponse);
+            let dataResponse = await addData(userData);
             form.action = `../index.html`;
-            // form.submit();
+            form.submit();
         } else {
             let errorMessage = document.getElementsByClassName("login-container__warning");
             errorMessage[0].style.color = 'red';

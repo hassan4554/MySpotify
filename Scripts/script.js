@@ -277,7 +277,6 @@ document.getElementById("login-Btn").addEventListener('click', NavigateToLogin);
 async function getAlbums() {
     let songs = await fetch('/songs/');
     let response = await songs.text();
-    console.log(response);
 
     let div = document.createElement('div');
     div.innerHTML = response;
